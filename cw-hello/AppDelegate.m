@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "WeexSDK.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [WXAppConfiguration setAppGroup:@"AliApp"];
+    [WXAppConfiguration setAppName:@"WeexDemo"];
+    [WXAppConfiguration setAppVersion:@"1.0.0"];
+    
+    //init sdk environment
+    [WXSDKEngine initSDKEnvironment];
+    
+    //register custom module and component，optional
+    [WXSDKEngine registerComponent:@"MyView" withClass:[MyViewComponent class]];
+    [WXSDKEngine registerModule:@"event" withClass:[WXEventModule class]];
+    
+    //register the implementation of protocol, optional
+    [WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)];
+    
+    //set the log level
+    [WXLog setLogLevel: WXLogLevelAll];
+    
     return YES;
 }
 
