@@ -10,6 +10,9 @@
 		38B8BBD1B41309BA9C4E4C89 /* libPods-cw-helloUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 791EB1AE9CAEABF7B1034B6A /* libPods-cw-helloUITests.a */; };
 		4835B8E720ECDB67000779D1 /* WeexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4835B8E620ECDB67000779D1 /* WeexSDK.framework */; };
 		4835B8E920ECDBBC000779D1 /* native-bundle-main.js in Resources */ = {isa = PBXBuildFile; fileRef = 4835B8E820ECDBBC000779D1 /* native-bundle-main.js */; };
+		4835B8F020EDFE8F000779D1 /* MainViewComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4835B8EF20EDFE8F000779D1 /* MainViewComponent.m */; };
+		4835B8F320EDFEEA000779D1 /* Weex_Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4835B8F220EDFEEA000779D1 /* Weex_Setup.m */; };
+		4835B8F620EE36E8000779D1 /* MainViewModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4835B8F520EE36E8000779D1 /* MainViewModule.m */; };
 		485A028E20EA122400CA3FF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A028D20EA122400CA3FF1 /* AppDelegate.m */; };
 		485A029120EA122400CA3FF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A029020EA122400CA3FF1 /* ViewController.m */; };
 		485A029420EA122400CA3FF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485A029220EA122400CA3FF1 /* Main.storyboard */; };
@@ -42,6 +45,12 @@
 /* Begin PBXFileReference section */
 		4835B8E620ECDB67000779D1 /* WeexSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeexSDK.framework; path = "sdk/WEEXSDK/incubator-weex/ios/sdk/Products/WeexSDK.framework"; sourceTree = "<group>"; };
 		4835B8E820ECDBBC000779D1 /* native-bundle-main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "native-bundle-main.js"; sourceTree = "<group>"; };
+		4835B8EE20EDFE8F000779D1 /* MainViewComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewComponent.h; sourceTree = "<group>"; };
+		4835B8EF20EDFE8F000779D1 /* MainViewComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewComponent.m; sourceTree = "<group>"; };
+		4835B8F120EDFEEA000779D1 /* Weex_Setup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Weex_Setup.h; sourceTree = "<group>"; };
+		4835B8F220EDFEEA000779D1 /* Weex_Setup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Weex_Setup.m; sourceTree = "<group>"; };
+		4835B8F420EE36E8000779D1 /* MainViewModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewModule.h; sourceTree = "<group>"; };
+		4835B8F520EE36E8000779D1 /* MainViewModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewModule.m; sourceTree = "<group>"; };
 		485A028920EA122400CA3FF1 /* cw-hello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cw-hello.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		485A028C20EA122400CA3FF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		485A028D20EA122400CA3FF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +120,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4835B8EA20EDFA8C000779D1 /* Weex */ = {
+			isa = PBXGroup;
+			children = (
+				4835B8F120EDFEEA000779D1 /* Weex_Setup.h */,
+				4835B8F220EDFEEA000779D1 /* Weex_Setup.m */,
+				4835B8EB20EDFA8C000779D1 /* Handler */,
+				4835B8EC20EDFA8C000779D1 /* Module */,
+				4835B8ED20EDFA8C000779D1 /* Component */,
+			);
+			path = Weex;
+			sourceTree = "<group>";
+		};
+		4835B8EB20EDFA8C000779D1 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		4835B8EC20EDFA8C000779D1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				4835B8F420EE36E8000779D1 /* MainViewModule.h */,
+				4835B8F520EE36E8000779D1 /* MainViewModule.m */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		4835B8ED20EDFA8C000779D1 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				4835B8EE20EDFE8F000779D1 /* MainViewComponent.h */,
+				4835B8EF20EDFE8F000779D1 /* MainViewComponent.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		485A028020EA122400CA3FF1 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +183,7 @@
 		485A028B20EA122400CA3FF1 /* cw-hello */ = {
 			isa = PBXGroup;
 			children = (
+				4835B8EA20EDFA8C000779D1 /* Weex */,
 				485A028C20EA122400CA3FF1 /* AppDelegate.h */,
 				485A028D20EA122400CA3FF1 /* AppDelegate.m */,
 				485A028F20EA122400CA3FF1 /* ViewController.h */,
@@ -392,6 +439,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				485A029120EA122400CA3FF1 /* ViewController.m in Sources */,
+				4835B8F620EE36E8000779D1 /* MainViewModule.m in Sources */,
+				4835B8F020EDFE8F000779D1 /* MainViewComponent.m in Sources */,
+				4835B8F320EDFEEA000779D1 /* Weex_Setup.m in Sources */,
 				485A029C20EA122500CA3FF1 /* main.m in Sources */,
 				485A028E20EA122400CA3FF1 /* AppDelegate.m in Sources */,
 			);

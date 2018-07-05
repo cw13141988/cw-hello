@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WeexSDK.h"
+#import "Weex_Setup.h"
 @interface AppDelegate ()
 
 @end
@@ -25,12 +26,15 @@
     //init sdk environment
     [WXSDKEngine initSDKEnvironment];
     
+    //weex组件注册
+    [Weex_Setup setup];
+    
     //register custom module and component，optional
-    [WXSDKEngine registerComponent:@"MyView" withClass:[MyViewComponent class]];
-    [WXSDKEngine registerModule:@"event" withClass:[WXEventModule class]];
+//    [WXSDKEngine registerComponent:@"MyView" withClass:[MyViewComponent class]];
+//    [WXSDKEngine registerModule:@"event" withClass:[WXEventModule class]];
     
     //register the implementation of protocol, optional
-    [WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)];
+//    [WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)];
     
     //set the log level
     [WXLog setLogLevel: WXLogLevelAll];
