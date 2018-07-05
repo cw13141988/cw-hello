@@ -10,4 +10,6 @@
 
 @interface Weex_Setup : NSObject
 
++ (void)setup;
+
 @end
